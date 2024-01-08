@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UtF-8">
+    <title>Ghee Store-Home</title>
+    <style>
+        #id {
+            padding: 5px;
+            background-image: linear-gradient(to left, rgb(251, 172, 172), rgb(248, 248, 124));
+            height: 100%;
+
+        }
+
+        h1 {
+            font-family: 'Courier New', Courier, monospace cursive;
+            text-shadow: 2px 2px rgb(147, 223, 126);
+        }
+
+        NAV {
+            background-color: rgb(220, 235, 248);
+
+        }
+
+        a {
+            text-decoration: none;
+            COLOR: rgb(87, 25, 24);
+            padding: 20px 10px 20px 10px;
+            position: relative;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        ul {
+            symbols: square;
+        }
+        * {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #555;
+  &:before, &:after {
+    box-sizing: border-box;
+  }
+}
+
+.navigation {
+	background: rgba(0,0,0,.7);
+	position: absolute;
+		top:0;
+		bottom:0;
+		left:-100%;
+	overflow: hidden;
+	transition: left 0.3s;
+	width: 100%;
+	z-index: 100;
+	h1, h1 a{
+		color: #fff;
+		width: 100%;
+		text-align: center;
+		z-index: 101;
+	}
+	h1 a{
+		display:block;
+    font-size: 40px;
+		padding: 10px 20px;
+		margin-bottom: 20px;
+		text-decoration: none;
+		transition: all .3s ease;
+		&:hover {
+			background: rgba(255,255,255,.2);
+		}
+	}
+}
+.toggle-button {
+	display: block;
+	padding: 10px;
+	position: absolute;
+		top:0;
+		left:0;
+	z-index: 101;
+
+	.wolverine {
+		display: inline-block;
+		height: 26px;
+		padding: 0px 0px;
+		cursor: pointer;
+
+		opacity: .97;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    span {
+			display:inline-block;
+			text-transform: uppercase;
+			line-height: 18px;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 18px;
+			font-weight: bold;
+			color: #fff;
+			margin-left: 0px;
+			width:0px;
+			overflow:hidden;
+		}
+
+		.claws {
+			position: relative;
+				top:-2px;
+			width: 20px;
+			height: 4px;
+			background: rgb(0,0,0);
+			display:inline-block;
+
+			&:before, &:after {
+				display: block;
+				content: "";
+				height: 4px;
+				width: 20px;
+				background: rgb(0,0,0);
+				position: absolute;
+				z-index: -1;
+				-webkit-transform-origin: 50% 50%;
+				transform-origin: 50% 50%;
+				-webkit-transition: all .1s .2s,-webkit-transform .2s ease;
+				-moz-transition: all .1s .2s ease,-moz-transform .2s ease;
+				-o-transition: all .1s .2s ease,-o-transform .2s ease;
+				transition: all .1s .2s ease,transform .2s ease;
+			}  
+
+			&:before {
+				top: 8px;
+			}
+
+			&:after {
+				top: -8px;
+			}
+		}
+	}
+}
+.nav-control {
+	position: absolute;
+		left:-9999px;
+	width: 100%;
+	clip: rect(0, 0, 0, 0);
+
+	&:checked ~ .navigation {
+		left: 0;
+		opacity: 1;
+		transition: left 0.3s, opacity 0.3s;
+
+		ul li {
+			opacity: 1;
+		}
+	}
+	&:checked ~ .toggle-button {
+
+    .wolverine {
+
+        .claws {
+        -webkit-transition: all .1s 0s;
+        -moz-transition: all .1s 0s ease;
+        -o-transition: all .1s 0s ease;
+        transition: all .1s 0s ease;
+        background: transparent !important;
+        z-index: 101;
+
+        &:before, &:after {
+          background: rgb(255,255,255);
+          -webkit-transition: all .1s ease,-webkit-transform .1s .2s;
+          -moz-transition: all .1s ease,-moz-transform .1s .2s ease;
+          -o-transition: all .1s ease,-o-transform .1s .2s ease;
+          transition: all .1s ease,transform .1s .2s ease;
+          width: 20px;
+        }
+
+        &:before {
+          -webkit-transform: rotate3d(0,0,1,45deg);
+          transform: rotate3d(0,0,1,45deg);
+        }
+
+        &:after {
+          -webkit-transform: rotate3d(0,0,1,-45deg);
+          transform: rotate3d(0,0,1,-45deg);
+        }
+      }  
+    }
+  }
+}
+
+
+
+
+    </style>
+</head>
+
+<body></body>
+<h1 align="center">Central Ghee Store</h1>
+<input type="checkbox" id="nav-control" class="nav-control">
+<label for="nav-control" class="toggle-button">
+    <div class="wolverine">
+        <div class="claws"></div> <span>menu</span>
+    </div>
+</label>
+<nav class="navigation">
+
+    <h1><a href="Home.html">Home</a></h1>
+    <h1><a href="AboutUs.html">AboutUs</a></h1>
+    <h1><a href="SignInPage.html">SignIn/SignUp</a></h1>
+
+</nav>
+
+<div id="id">
+    <table width="100%" , style="font-variant: small-caps;">
+        <tr>
+            <td padding="50px"><b>We produce fresh and hyginic milk products</b> 
+                <br>
+                <p>PRODUCTS AVAILABLE:</p>
+                <ol>
+                    <li>Butter
+                        <ul>
+                            <li>Cow Butter</li>
+                            <li>White Butter(Buffelo butter)</li>
+                        </ul>
+                    </li>
+                    <li>Ghee
+                        <ul>
+                            <li>Full Boil</li>
+                            <li>Semi Boil</li>
+                        </ul>
+                    </li>
+                    <li>Paneer</li>
+                    <li>Kova-plain</li>
+                    <li>Milk cream</li>
+                    <li>Curd</li>
+                </ol>
+            </td>
+
+            <td><img src="..\src\images\ghee_main.png" alt="" align="right"></td>
+        </tr>
+    </table>
+
+
+</div>
+</body>
+
+</html>
